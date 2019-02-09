@@ -195,6 +195,10 @@
     <Compile Include="Migrations\201902072208011_populate_gigs.Designer.cs">
       <DependentUpon>201902072208011_populate_gigs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902092335370_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201902092335370_AddForeignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201902092335370_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -289,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902072208011_populate_gigs.resx">
       <DependentUpon>201902072208011_populate_gigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902092335370_AddForeignKeyPropertiesToGig.resx">
+      <DependentUpon>201902092335370_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

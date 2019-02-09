@@ -3,8 +3,9 @@
 @{
     ViewBag.Title = "Create";
 }
-<h1>Create</h1>
-<form>
+<h1>Add a Gig</h1>
+@using (Html.BeginForm("Create", "Gigs"))
+{
     <div class="form-group">
         @Html.LabelFor(m=>m.Venue)
         @Html.TextBoxFor(m=>m.Venue, new {@class="form-control" })
@@ -23,10 +24,5 @@
     </div>    
     <button type="submit"  class="btn btn-primary">Save</button>
 
-
-
-
-
-
-</form>
+}
 
