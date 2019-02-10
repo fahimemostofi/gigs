@@ -199,9 +199,14 @@
     <Compile Include="Migrations\201902092335370_AddForeignKeyPropertiesToGig.Designer.cs">
       <DependentUpon>201902092335370_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902100129516_AddAttendance.cs" />
+    <Compile Include="Migrations\201902100129516_AddAttendance.Designer.cs">
+      <DependentUpon>201902100129516_AddAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -298,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902092335370_AddForeignKeyPropertiesToGig.resx">
       <DependentUpon>201902092335370_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902100129516_AddAttendance.resx">
+      <DependentUpon>201902100129516_AddAttendance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
