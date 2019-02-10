@@ -183,6 +183,7 @@
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Dtos\AttendanceDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,9 +219,14 @@
     <Compile Include="Migrations\201902100250449_AddNameToApplcationUser.Designer.cs">
       <DependentUpon>201902100250449_AddNameToApplcationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902100520051_AddFollowing.cs" />
+    <Compile Include="Migrations\201902100520051_AddFollowing.Designer.cs">
+      <DependentUpon>201902100520051_AddFollowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902100250449_AddNameToApplcationUser.resx">
       <DependentUpon>201902100250449_AddNameToApplcationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902100520051_AddFollowing.resx">
+      <DependentUpon>201902100520051_AddFollowing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

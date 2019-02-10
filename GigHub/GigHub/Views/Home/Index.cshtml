@@ -8,6 +8,31 @@
 <ul>
     @foreach (var gig in Model)
     {
-        <li>@gig.DateTime - @gig.Artist.Name</li>
+        <li>@gig.DateTime - @gig.Artist.Name <button data-gig-id="@gig.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button></li>
     }
 </ul>
+
+@section scripts{
+    <script>
+        //when the document is loaded we want to subscribe to the click event of button
+        $(document).ready(function() {
+            $(".js-toggle-attendance").click(function(e) {
+                    var button = $(e.target);
+                    $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
+                
+                .done(function() {
+                    button
+                        .removeClass("btn-default")
+                        .addClass("btn-info")
+                        .text("Going");
+                    console.log("success");
+
+                })
+                .fail(function() {
+                    alert("something went wrong!");
+                    console.log("fail");
+                });
+        });
+    })
+    </script>()
+}
