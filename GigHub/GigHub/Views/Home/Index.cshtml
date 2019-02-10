@@ -8,7 +8,8 @@
 <ul>
     @foreach (var gig in Model)
     {
-        <li>@gig.DateTime - @gig.Artist.Name <button data-gig-id="@gig.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button></li>
+        <li>@gig.DateTime - @gig.Artist.Name <button data-gig-id="@gig.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>  <button data-artist-id="@gig.ArtistId" class="btn btn-default js-toggle-following">Following?</button></li>
+        
     }
 </ul>
 
@@ -17,22 +18,42 @@
         //when the document is loaded we want to subscribe to the click event of button
         $(document).ready(function() {
             $(".js-toggle-attendance").click(function(e) {
-                    var button = $(e.target);
-                    $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
-                
-                .done(function() {
-                    button
-                        .removeClass("btn-default")
-                        .addClass("btn-info")
-                        .text("Going");
-                    console.log("success");
+                var button = $(e.target);
+                $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
+                    .done(function() {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Going");
+                        console.log("success");
 
-                })
-                .fail(function() {
-                    alert("something went wrong!");
-                    console.log("fail");
-                });
+                    })
+                    .fail(function() {
+                        alert("something went wrong!");
+                        console.log("fail");
+                    });
+            });
         });
-    })
+
+
+        $(document).ready(function() {
+            $(".js-toggle-following").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/following", { artistId: button.attr("data-artist-id") })
+                    .done(function() {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-success")
+                            .text("Following");
+
+
+                    })
+                    .fail(function() {
+                        alert("something went wrong");
+                    });
+
+
+            });
+        });
     </script>()
 }

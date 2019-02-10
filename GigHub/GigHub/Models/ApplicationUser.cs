@@ -21,7 +21,7 @@ namespace GigHub.Models
         public ApplicationUser()
         {
             Followers = new Collection<Following>();
-            Followees= new Collection<Following>();
+            Followees = new Collection<Following>();
                   
         }
 
